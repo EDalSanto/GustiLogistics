@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'hello_world', to: 'hello_world#index'
   root   'static_pages#home'
 
   get    '/login',            to: 'sessions#new'
