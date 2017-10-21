@@ -54,10 +54,9 @@ no_blocks:
   travel_time: 1
   cover_time: 4
   growth_factor: 1.2
-  cant_travel_start: <%= nil %> 
-  cant_travel_end: <%= nil %> 
+  cant_travel_start: <%= nil %>
+  cant_travel_end: <%= nil %>
   cant_produce_end: <%= nil %>
   cant_produce_start: <%= nil %>
   next_reorder_date: <%= nil %>
   enroute: true
-

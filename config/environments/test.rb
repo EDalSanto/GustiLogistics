@@ -39,10 +39,10 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-  
+
   config.after_initialize do
     # Set Date.today to March 26th, 2017, but allow it to move forward
-    d = Date.new(2017, 3, 26)
+    d = DateTime.new(2017, 3, 26)
     Timecop.travel(d)
   end
 end
