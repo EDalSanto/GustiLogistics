@@ -4368,6 +4368,13 @@ react-on-rails@^10.0.0:
     react-on-rails "^9.0.3"
     react-redux "^5.0.6"
 
+react-on-rails@^10.0.1:
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/react-on-rails/-/react-on-rails-10.0.1.tgz#5abd1835109dcf7f362f2e4ccd08fca316eec87e"
+  dependencies:
+    react-on-rails "^10.0.0"
+    react-redux "^5.0.6"
+
 react-on-rails@^9.0.0-beta.12, react-on-rails@^9.0.3:
   version "9.0.3"
   resolved "https://registry.yarnpkg.com/react-on-rails/-/react-on-rails-9.0.3.tgz#da8a9873a94d62fe91e1f80d76716583f2be9da7"
