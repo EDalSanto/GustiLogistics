@@ -215,7 +215,7 @@ class Product < ApplicationRecord
 
     # Accounts for future year
     def actual_days_till_next_reorder
-      naive_days_till_next_reorder_yday + years_in_future(naive_next_reorder_date)
+      naive_days_till_next_reorder_yday
     end
 
     ###################### Reorder Quantity ##########################
