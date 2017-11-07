@@ -36,9 +36,9 @@ class Product < ApplicationRecord
 
   def actual_next_reorder_date
     if cant_travel_start.nil?
-      calculated_date = Date.today + naive_days_till_next_reorder
+      calculated_date = Date.today + naive_days_till_next_reorder.to_i
     else
-      calculated_date = Date.today + actual_days_till_next_reorder
+      calculated_date = Date.today + actual_days_till_next_reorder.to_i
     end
 
     # Overdue dates have a reorder date of today, as asked by Gustiamo
