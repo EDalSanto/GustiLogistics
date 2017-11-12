@@ -24,6 +24,7 @@ gem 'responders',                     '~> 2.4.0'
 gem 'pry-rails',                      '~> 0.3.5'
 gem 'newrelic_rpm',                   '~> 4.0', '>= 4.0.0.332'
 gem 'will_paginate',                  '~> 3.1', '>= 3.1.5'
+gem 'knock',                          '~> 2.1', '>= 2.1.1'
 
 group :test do
   gem 'simplecov',                    '~> 0.13.0'
@@ -49,8 +50,5 @@ group :development do
   gem 'spring-watcher-listen',        '~>2.0.0'
   gem 'brakeman',                     '~> 3.6', '>= 3.6.1', require: false
 end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'mini_racer', platforms: :ruby

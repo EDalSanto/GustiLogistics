@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  get 'hello_world', to: 'hello_world#index'
+  namespace :api do
+    namespace :v1  do
+      post 'user_token' => 'user_token#create'
+
+      resources :products
+    end
+  end
+
   root   'static_pages#home'
 
   get    '/login',            to: 'sessions#new'
