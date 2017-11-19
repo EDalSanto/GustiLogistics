@@ -1,6 +1,5 @@
 class PurchaseImportsController < ApplicationController
   include Importable
-  before_action :logged_in_user
   before_action :check_valid_file_present, only: :create
   before_action :check_valid_filename, only: :create
 
