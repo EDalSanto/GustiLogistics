@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   helper ProductsHelper
   before_action :product, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user
 
   def index
     @products = Product.search(params[:term]).paginate(page: params[:page])

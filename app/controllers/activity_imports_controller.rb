@@ -2,6 +2,7 @@ class ActivityImportsController < ApplicationController
   include Importable
   before_action :check_valid_file_present, only: :create
   before_action :check_valid_filename, only: :create
+  before_action :logged_in_user
 
   def new
     @activity_import = ActivityImport.new

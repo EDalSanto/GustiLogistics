@@ -1,6 +1,8 @@
 class CalendarsController < ApplicationController
+  before_action :logged_in_user
+
   def index
-    @products = Product.select_setup_products 
+    @products = Product.select_setup_products
 
     update_overdue_unordered_products
 
@@ -14,7 +16,7 @@ class CalendarsController < ApplicationController
   private
 
     def update_overdue_unordered_products
-      @products.each do |product| 
+      @products.each do |product|
         unless product.enroute || product.next_reorder_date > Date.today
           product.update_attribute(:next_reorder_date, Date.today)
         end
