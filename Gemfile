@@ -24,6 +24,8 @@ gem 'responders',                     '~> 2.4.0'
 gem 'pry-rails',                      '~> 0.3.5'
 gem 'newrelic_rpm',                   '~> 4.0', '>= 4.0.0.332'
 gem 'will_paginate',                  '~> 3.1', '>= 3.1.5'
+gem 'jwt',                            '~> 2.1'
+gem 'active_model_serializers',       '~> 0.10.6'
 
 group :test do
   gem 'simplecov',                    '~> 0.13.0'

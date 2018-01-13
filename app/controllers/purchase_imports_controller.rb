@@ -1,8 +1,8 @@
 class PurchaseImportsController < ApplicationController
   include Importable
-  before_action :logged_in_user
   before_action :check_valid_file_present, only: :create
   before_action :check_valid_filename, only: :create
+  before_action :logged_in_user
 
   def new
     @purchase_import = PurchaseImport.new
@@ -16,7 +16,7 @@ class PurchaseImportsController < ApplicationController
       render :new
     end
   end
- 
+
   private
 
     def import_params
