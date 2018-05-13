@@ -265,7 +265,7 @@ class Product < ApplicationRecord
     end
 
     def naive_reorder_quantity
-      if no_shipping_blocks?
+      if no_shipping_blocks? || quantity_on_next_reorder_arrival > naive_full_order
         naive_full_order
       else
         naive_full_order - quantity_on_next_reorder_arrival
