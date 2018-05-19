@@ -37,13 +37,20 @@
   </div>
 
   <div class="field">
+    <%= f.label :growth_factor %>
+    <%= f.text_field :growth_factor %>
+  </div>
+
+  <h3>Ignore Year for Dates below</h3>
+
+  <div class="field">
     <%= f.label :cant_travel_start %>
     <%= f.date_field :cant_travel_start %>
   </div>
 
   <div class="field">
     <%= f.label :cant_travel_end %>
-    <%= f.date_field :cant_travel_start %>
+    <%= f.date_field :cant_travel_end %>
   </div>
 
   <div class="field">
@@ -54,11 +61,6 @@
   <div class="field">
     <%= f.label :cant_produce_end %>
     <%= f.date_field :cant_produce_end %>
-  </div>
-
-  <div class="field">
-    <%= f.label :growth_factor %>
-    <%= f.text_field :growth_factor %>
   </div>
 
   <div class="actions">
