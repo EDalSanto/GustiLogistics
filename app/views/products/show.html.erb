@@ -62,6 +62,7 @@
 
 <div id="product-show-bottom-row">
   <div id="product-edit-home">
+    <%= link_to 'Delete', @product, method: :delete, data: { confirm: "Do you really want to delete this product?" } %> |
     <%= link_to 'Edit', edit_product_path(@product) %> |
     <%= link_to 'Home', products_path %>
   </div>
