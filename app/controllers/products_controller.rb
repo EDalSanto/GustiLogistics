@@ -48,6 +48,12 @@ class ProductsController < ApplicationController
             :current,
             :cover_time,
             :growth_factor,
+            :lead_time,
+            :travel_time,
+            :cant_travel_start,
+            :cant_travel_end,
+            :cant_produce_start,
+            :cant_produce_end,
             :enroute,
             :term
           )
