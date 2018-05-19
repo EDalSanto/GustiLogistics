@@ -17,7 +17,19 @@ class ProductsController < ApplicationController
     @second_half_top_customers = second_half_top_customers
   end
 
+  def new
+    @product = Product.new
+  end
+
   def create
+    @product = Product.new(product_params)
+
+    if @product.save!
+      product.update_reorder_date
+      redirect_to(product, notice: 'Product successfully created!')
+    else
+      render action: 'new'
+    end
   end
 
   def update
