@@ -70,7 +70,8 @@ class ProductsController < ApplicationController
             :cant_produce_start,
             :cant_produce_end,
             :enroute,
-            :term
+            :term,
+            :gusti_id
           )
     end
 end
