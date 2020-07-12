@@ -11,6 +11,11 @@ class Product < ApplicationRecord
 
   validates :gusti_id, presence: true, uniqueness: { case_sensitive: false }
   validates :description, presence: true
+  validates :current, presence: true, numericality: { only_integer: true }
+  validates :lead_time, presence: true
+  validates :cover_time, presence: true
+  validates :travel_time, presence: true
+  validates :growth_factor, presence: true
 
   scope :select_setup_products, -> { where('next_reorder_date IS NOT NULL') }
 
