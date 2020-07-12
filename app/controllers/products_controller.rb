@@ -25,8 +25,8 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save!
-      product.update_reorder_date
-      redirect_to(product, notice: 'Product successfully created!')
+      @product.update_reorder_date
+      redirect_to(@product, notice: "#{@product.description} successfully created!")
     else
       render action: 'new'
     end
@@ -35,7 +35,7 @@ class ProductsController < ApplicationController
   def update
     if product.update(product_params)
       product.update_reorder_date
-      redirect_to(product, notice: 'Product was successfully updated.')
+      redirect_to(product, notice: "#{product.description} was successfully updated.")
     else
       render action: 'edit'
     end
@@ -44,11 +44,12 @@ class ProductsController < ApplicationController
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
-    redirect_to(products_path, notice: "#{product.description} deleted.")
+    redirect_to(products_path, notice: "#{@product.description} deleted.")
   end
 
   private
 
+    # TODO: remove
     def product
       @product ||= Product.find(params[:id])
     end
