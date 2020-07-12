@@ -11,6 +11,8 @@
 <% end %>
 
 <%= form_for(product) do |f| %>
+  <h3>Required</h3>
+
   <div class="field">
     <%= f.label :description %>
     <%= f.text_field :description %>
@@ -46,25 +48,25 @@
     <%= f.text_field :growth_factor %>
   </div>
 
-  <h3>Ignore Year for Dates below</h3>
+  <h3>Optional</h3>
 
   <div class="field">
-    <%= f.label :cant_travel_start %>
+    <%= f.label :cant_travel_start, "Cannot travel start" %>
     <%= f.date_field :cant_travel_start %>
   </div>
 
   <div class="field">
-    <%= f.label :cant_travel_end %>
+    <%= f.label :cant_travel_end, "Cannot travel end" %>
     <%= f.date_field :cant_travel_end %>
   </div>
 
   <div class="field">
-    <%= f.label :cant_produce_start %>
+    <%= f.label :cant_produce_start, "Cannot produce start" %>
     <%= f.date_field :cant_produce_start %>
   </div>
 
   <div class="field">
-    <%= f.label :cant_produce_end %>
+    <%= f.label :cant_produce_end, "Cannot produce end" %>
     <%= f.date_field :cant_produce_end %>
   </div>
 
