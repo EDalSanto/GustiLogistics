@@ -104,7 +104,6 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (2.2.0)
-    libv8 (6.7.288.46.1)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -119,8 +118,6 @@ GEM
     method_source (0.9.2)
     mini_mime (1.0.1)
     mini_portile2 (2.4.0)
-    mini_racer (0.2.4)
-      libv8 (>= 6.3)
     minitest (5.11.3)
     minitest-capybara (0.9.0)
       capybara
@@ -292,7 +289,6 @@ DEPENDENCIES
   jquery-rails (~> 4.3.1)
   listen (~> 3.0.8)
   m (~> 1.5.0)
-  mini_racer
   minitest (~> 5.10, >= 5.10.1)
   minitest-rails (~> 3.0)
   minitest-rails-capybara (~> 3.0.1)
@@ -322,4 +318,4 @@ RUBY VERSION
    ruby 2.4.2p198
 
 BUNDLED WITH
-   1.16.1
+   2.1.4
