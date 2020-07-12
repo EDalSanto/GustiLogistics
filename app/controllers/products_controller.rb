@@ -24,7 +24,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
 
-    if @product.save!
+    if @product.save
       @product.update_reorder_date
       redirect_to(@product, notice: "#{@product.description} successfully created!")
     else
