@@ -30,7 +30,7 @@ textarea {
     margin-bottom: 10px;
   }
   .btn {
-	  color: white;
+	  color: blue;
   }
 }
 
@@ -41,9 +41,9 @@ textarea {
 
 /* Products Index Page */
 
-#products-table { 
+#products-table {
   tbody, a {
-    cursor: pointer; 
+    cursor: pointer;
   }
 }
 
@@ -97,16 +97,16 @@ p {
     padding: 20px 0 5px 0;
     margin: 0;
     width: 100%;
-  }  
+  }
   #enroute-form {
     margin: auto;
     position: absolute;
     right: 20px;
     top: 100px;
-    .btn, .btn-primary { 
+    .btn, .btn-primary {
       margin: 0;
-    } 
-  } 
+    }
+  }
 }
 
 #product-stats {
@@ -157,7 +157,7 @@ p {
     }
   }
   p {
-	  margin: 0; 
+	  margin: 0;
   }
 }
 
@@ -226,7 +226,7 @@ footer {
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: $gray-light;
-  a { 
+  a {
     color: $gray;
 	&:hover {
 	  color: $gray-darker;
@@ -253,6 +253,6 @@ footer {
     label {
       font-size: 20px;
       font-weight: normal;
-    }  
+    }
   }
 }

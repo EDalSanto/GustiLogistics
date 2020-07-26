@@ -7,7 +7,11 @@
   <h4><strong>Item ID: </strong><%= @product.gusti_id %></h4>
   <h4><strong>Current: </strong><%= @product.current %></td></h4>
   <h4><strong>Sales This Month: </strong><%= @product.sales_this_month %></h4>
-  <h4 id="reorder-by-show"><strong>Reorder By: </strong><%= "#{@product.display_reorder_date}" %></h4>
+  <% if @product.product_snooze.present? %>
+    <h4><strong>Snoozed Until: </strong><%= "#{@product.product_snooze.end_date}" %></h4>
+  <% else %>
+    <h4 id="reorder-by-show"><strong>Reorder By: </strong><%= "#{@product.display_reorder_date}" %></h4>
+  <% end %>
   <h4><strong>Reorder Quantity: </strong><%= "#{@product.actual_reorder_quantity} units" %></h4>
 </section>
 

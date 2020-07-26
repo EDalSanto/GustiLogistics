@@ -13,6 +13,8 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @product = Product.find(params[:id])
+
     @first_half_top_customers = first_half_top_customers
     @second_half_top_customers = second_half_top_customers
   end
