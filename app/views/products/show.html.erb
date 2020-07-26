@@ -1,8 +1,11 @@
 <header class="center" id="product-page-title">
   <h1 class="center" id="product-description"><strong><%= @product.description %></strong></h1>
-  <% if @product.product_snooze.present? %>
-    <%= render 'end_snooze_form' %>
-  <% end %>
+  <div>
+    <%= render 'enroute_form' %>
+    <% if @product.product_snooze.present? %>
+      <%= render 'end_snooze_form' %>
+    <% end %>
+  </div>
 </header>
 
 <section id="product-stats">
@@ -11,9 +14,8 @@
   <h4><strong>Sales This Month: </strong><%= @product.sales_this_month %></h4>
   <% if @product.product_snooze.present? %>
     <h4><strong>Snoozed Until: </strong><%= "#{@product.product_snooze.end_date}" %></h4>
-  <% else %>
-    <h4 id="reorder-by-show"><strong>Reorder By: </strong><%= "#{@product.display_reorder_date}" %></h4>
   <% end %>
+  <h4 id="reorder-by-show"><strong>Reorder By: </strong><%= "#{@product.display_reorder_date}" %></h4>
   <h4><strong>Reorder Quantity: </strong><%= "#{@product.actual_reorder_quantity} units" %></h4>
 </section>
 

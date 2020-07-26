@@ -99,10 +99,21 @@ p {
     width: 100%;
   }
   #enroute-form {
+    width: 200px;
     margin: auto;
     position: absolute;
     right: 20px;
     top: 100px;
+    .btn, .btn-primary {
+      margin: 0;
+    }
+  }
+  #remove-snooze-form {
+    width: 200px;
+    margin: auto;
+    position: absolute;
+    right: 20px;
+    top: 150px;
     .btn, .btn-primary {
       margin: 0;
     }
