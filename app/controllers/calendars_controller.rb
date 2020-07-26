@@ -1,6 +1,6 @@
 class CalendarsController < ApplicationController
   def index
-    @products = Product.select_setup_products 
+    @products = Product.select_setup_products.includes(:product_snooze)
 
     update_overdue_unordered_products
 
@@ -14,7 +14,7 @@ class CalendarsController < ApplicationController
   private
 
     def update_overdue_unordered_products
-      @products.each do |product| 
+      @products.each do |product|
         unless product.enroute || product.next_reorder_date > Date.today
           product.update_attribute(:next_reorder_date, Date.today)
         end

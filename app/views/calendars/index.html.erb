@@ -14,6 +14,9 @@
             <% if product.enroute %>
               <s><%= link_to product.description, product_path(product.id)
               %></s>
+            <% elsif product.product_snooze.present? %>
+              <% # Don't show snoozed products %>
+              <% next %>
             <% else %>
               <%= link_to product.description, product_path(product.id) %>
             <% end %>
