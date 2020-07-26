@@ -12,11 +12,7 @@
         <% @products_by_reorder_date[date].each do |product| %>
           <li class="reorder-link">
             <% if product.enroute %>
-              <s><%= link_to product.description, product_path(product.id)
-              %></s>
-            <% elsif product.product_snooze.present? %>
-              <% # Don't show snoozed products %>
-              <% next %>
+              <s><%= link_to product.description, product_path(product.id)%></s>
             <% else %>
               <%= link_to product.description, product_path(product.id) %>
             <% end %>

@@ -1,6 +1,6 @@
 class CalendarsController < ApplicationController
   def index
-    @products = Product.select_setup_products.includes(:product_snooze)
+    @products = Product.select_setup_products.includes(:product_snooze).reject(&:product_snooze)
 
     update_overdue_unordered_products
 
