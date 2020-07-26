@@ -8,7 +8,7 @@ class Product < ApplicationRecord
   has_many :activities, dependent: :destroy
   has_many :customer_purchase_orders, dependent: :destroy
   has_many :customers, through: :customer_purchase_orders
-  has_one :product_snooze
+  has_one :product_snooze, -> { active }
 
   validates :gusti_id, presence: true, uniqueness: { case_sensitive: false }
   validates :description, presence: true
