@@ -4,11 +4,15 @@ class ProductSnoozesController < ApplicationController
   def create
     product = Product.find(params[:product_snooze][:product_id])
     ProductSnooze.start_for(product: product)
+
+    redirect_back(fallback_location: root_path, notice: 'Product snoozed.')
   end
 
   def update
     product = Product.find(params[:product_snooze][:product_id])
     ProductSnooze.end_for(product: product)
+
+    redirect_back(fallback_location: root_path, notice: 'Product unsnoozed.')
   end
 
   private

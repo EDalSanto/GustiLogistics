@@ -4,6 +4,8 @@
     <%= render 'enroute_form' %>
     <% if @product.product_snooze.present? %>
       <%= render 'end_snooze_form' %>
+    <% else %>
+      <%= render 'start_snooze_form' %>
     <% end %>
   </div>
 </header>
