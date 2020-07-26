@@ -1,6 +1,8 @@
 <header class="center" id="product-page-title">
   <h1 class="center" id="product-description"><strong><%= @product.description %></strong></h1>
-  <%= render 'enroute_form' %>
+  <% if @product.product_snooze.present? %>
+    <%= render 'end_snooze_form' %>
+  <% end %>
 </header>
 
 <section id="product-stats">

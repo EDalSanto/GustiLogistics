@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   resources :purchase_imports, only: [:new, :create]
 
   resources :products
+
+  resources :product_snoozes, only: [:create, :update]
 end

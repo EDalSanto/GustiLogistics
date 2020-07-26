@@ -1,0 +1,4 @@
+<%= form_for(@product.product_snooze, remote: true, authenticity_token: true, html: { class: "pull-right", id: "enroute-form" }) do   |f| %>
+  <%= f.hidden_field :product_id, :value => @product.id %>
+  <%= f.submit "Remove Snooze", class: "btn" %>
+<% end %>
