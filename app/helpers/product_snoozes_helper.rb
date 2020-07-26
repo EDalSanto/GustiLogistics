@@ -1,0 +1,2 @@
+module ProductSnoozesHelper
+end
