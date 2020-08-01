@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   before_action :logged_in_user
 
   def index
-    @products = Product.search(params[:term]).paginate(page: params[:page])
+    @products = Product.search(params[:term]).paginate(page: params[:page]).includes(:product_snooze)
 
     respond_to do |format|
       format.js

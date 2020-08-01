@@ -8,6 +8,7 @@ class Product < ApplicationRecord
   has_many :activities, dependent: :destroy
   has_many :customer_purchase_orders, dependent: :destroy
   has_many :customers, through: :customer_purchase_orders
+  # Active means that a product will only have a product_snooze when that snooze is still active
   has_one :product_snooze, -> { active }
 
   validates :gusti_id, presence: true, uniqueness: { case_sensitive: false }

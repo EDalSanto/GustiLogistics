@@ -4,6 +4,7 @@
     <th>Description</th>
     <th>Current</th>
     <th>Reorder By</th>
+    <th>Snoozed Until</th>
   </tr>
 </thead>
 <tbody id="products-index-body">
@@ -13,6 +14,7 @@
       <td><%= link_to product.description, product %></td>
       <td><%= product.current %></td>
       <td><%= product.display_reorder_date %></td>
+      <td><%= product.product_snooze&.end_date %></td>
     </tr>
   <% end %>
 </tbody>
