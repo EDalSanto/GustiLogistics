@@ -42,7 +42,8 @@ Rails.application.configure do
 
   config.after_initialize do
     # Set Date.today to March 26th, 2017, but allow it to move forward
-    d = Date.new(2017, 3, 26)
-    Timecop.travel(d)
+    #d = Date.new(2017, 3, 26)
+    #Timecop.travel(d)
+    # TODO: don't mock now for all tests!
   end
 end

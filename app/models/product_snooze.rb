@@ -21,6 +21,10 @@ class ProductSnooze < ApplicationRecord
     active.where(product: product).update(end_date: Time.now)
   end
 
+  def active?
+    end_date > Time.now
+  end
+
   private
 
   def no_other_active_snoozes_for_product
