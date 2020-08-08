@@ -18,7 +18,7 @@ class ProductSnooze < ApplicationRecord
   end
 
   def self.end_for(product:)
-    find_by(product: product).update(end_date: Time.now)
+    active.where(product: product).update(end_date: Time.now)
   end
 
   private
